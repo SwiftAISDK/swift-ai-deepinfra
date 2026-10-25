@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-deepinfra",
+  "status": "coarse-import",
+  "upstream": [
+    {
+      "name": "@ai-sdk/deepinfra",
+      "implementation": [
+        "packages/deepinfra/src"
+      ],
+      "tests": [
+        "packages/deepinfra/src/deepinfra-chat-language-model.test.ts",
+        "packages/deepinfra/src/deepinfra-image-model.test.ts",
+        "packages/deepinfra/src/deepinfra-provider.test.ts"
+      ]
+    }
+  ],
+  "swift": {
+    "sources": [
+      "Sources/SwiftAIDeepInfra/DeepInfraModels.swift",
+      "Sources/SwiftAIDeepInfra/DeepInfraProvider.swift",
+      "Sources/SwiftAIDeepInfra/DeepInfraRouting.swift",
+      "Sources/SwiftAIDeepInfra/DeepInfraUsage.swift",
+      "Sources/SwiftAIDeepInfra/ImageInputCapabilities.swift"
+    ],
+    "tests": [
+      "Tests/SwiftAIDeepInfraTests/DeepInfraProviderTests.swift",
+      "Tests/SwiftAIDeepInfraTests/FixtureDownloadTransport.swift",
+      "Tests/SwiftAIDeepInfraTests/TestSupport.swift"
+    ],
+    "resources": []
+  },
+  "differences": [
+    {
+      "kind": "native-adaptation",
+      "reason": "Preserve Swift async/await, Sendable, Foundation transport and existing documented gaps; see Docs/CoreV6Parity.md and PortingStatus.md."
+    }
+  ],
+  "reviewNote": "M6: provider runtime, configuration and focused tests extracted. Existing upstream baseline, capability boundaries and gaps retained.",
+  "canonicalOnlyReferences": [],
+  "canonicalDirectory": "Packages/swift-ai-deepinfra"
+}

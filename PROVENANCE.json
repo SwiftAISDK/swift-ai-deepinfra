@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-deepinfra",
+  "version": "1.0.0",
+  "releaseID": "modular-3",
+  "source": {
+    "commit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "baseCommit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "workingTree": false,
+    "inputsSHA256": "49b802ba4a30454f78c9886ab3114537ef659ab3e6db7775479b7351f6e3f0ab"
+  },
+  "dependencies": [
+    {
+      "package": "swift-ai-core",
+      "from": "1.1.0"
+    },
+    {
+      "package": "swift-ai-openai-compatible",
+      "from": "1.0.0"
+    }
+  ],
+  "changes": [
+    {
+      "id": "remaining-package-extraction",
+      "notes": "Extract the existing runtime, typed settings and standalone tests from the compatibility aggregate. Preserve the reviewed npm baseline and existing capability/gap boundaries.",
+      "compatibility": "Initial independent Swift package version. Existing SwiftAISDK entry points remain in the development compatibility facade; no npm-version equivalence is implied."
+    }
+  ],
+  "canonicalDirectory": "Packages/swift-ai-deepinfra",
+  "upstream": [
+    {
+      "name": "@ai-sdk/deepinfra",
+      "reviewedVersion": "3.0.78",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.deepInfra`, `OpenAICompatibleProvider`, `DeepInfraProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-T5YjR5X2pEXWlvRlSolJ7PrO8DIf6GKu+ehIAT7O/dYrSiKRzxqplqo/rjmgh4pdaKtTa66/QIrilBDVikctfw==",
+      "sourceRef": "npm:@ai-sdk/deepinfra@3.0.78",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ],
+  "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
+  "canonicalInputs": [
+    {
+      "canonicalPath": ".github/workflows/package-check.yml",
+      "sha256": "7ff448e130f7aed96c38accdf828b6d993997ebc5317358347e9a70a649e67ca"
+    },
+    {
+      "canonicalPath": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/Package.swift",
+      "sha256": "e4b1a29b40cd0a78896131c79e80ac8e118113b6e3b67fdb305db01569a84aba"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/Porting/map.json",
+      "sha256": "821af7a47400dcddf3b9643e84d2b7bf233e49f9cbfae17bdaeee1a11511a41d"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/README.md",
+      "sha256": "ebfd1537ec5a9c2b0d5a2c613cb526e25f8f2f42f662b24850c9c6f1c5a7adeb"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/Sources/SwiftAIDeepInfra/DeepInfraModels.swift",
+      "sha256": "eb9d5f6ddc45e958625becc1b2f23bf0dc76965d23972e7fca23f6319f88df35"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/Sources/SwiftAIDeepInfra/DeepInfraProvider.swift",
+      "sha256": "7fdaf5c86a0888940921c2a377178248e64352ee46f1ecadd9a2c89de6e6f3ea"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/Sources/SwiftAIDeepInfra/DeepInfraRouting.swift",
+      "sha256": "1ef82f5003b7054617dda28b8e5a221a7c6f7ab8b4a063a93d8a5d67280809e3"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/Sources/SwiftAIDeepInfra/DeepInfraUsage.swift",
+      "sha256": "0a1d70cf09363d217d8d716a4a9ba7a1156b53c8621f04e33e1fe8f9580095ae"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/Sources/SwiftAIDeepInfra/ImageInputCapabilities.swift",
+      "sha256": "8578db3fde14c9e12014c856ce4fb776c48d3aace111452f136b524bcdbc2927"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/Tests/SwiftAIDeepInfraTests/DeepInfraProviderTests.swift",
+      "sha256": "71f604e0197de40ec123646be97ee4c4149a19d8a535f37e704a5755760566c7"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/Tests/SwiftAIDeepInfraTests/FixtureDownloadTransport.swift",
+      "sha256": "fedbee0c2f6f2ca1166e3e7f82a2eab8c1dd73b145a89aec72abc02915b19abc"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/Tests/SwiftAIDeepInfraTests/TestSupport.swift",
+      "sha256": "9091df10ec16d3d9803cdacf65e9b9f7ec07429b918f9515ebd76302e63ebcb7"
+    }
+  ]
+}
