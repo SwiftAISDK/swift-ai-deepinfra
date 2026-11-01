@@ -26,7 +26,8 @@
     "tests": [
       "Tests/SwiftAIDeepInfraTests/DeepInfraProviderTests.swift",
       "Tests/SwiftAIDeepInfraTests/FixtureDownloadTransport.swift",
-      "Tests/SwiftAIDeepInfraTests/TestSupport.swift"
+      "Tests/SwiftAIDeepInfraTests/TestSupport.swift",
+      "Tests/SwiftAIDeepInfraTests/Weekly20261101CredentialsTests.swift"
     ],
     "resources": []
   },
