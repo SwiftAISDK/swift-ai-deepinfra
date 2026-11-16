@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-deepinfra",
-  "version": "1.1.3",
-  "releaseID": "weekly-upstream-20261115",
+  "version": "1.2.0",
+  "releaseID": "upstream-parity-20261116",
   "source": {
-    "commit": "1e543b35e0259a5bda888665dacf2d4a7f1bb0ed",
-    "baseCommit": "1e543b35e0259a5bda888665dacf2d4a7f1bb0ed",
+    "commit": "1c457dea36be42376a6853aecd5c48ffc4942178",
+    "baseCommit": "1c457dea36be42376a6853aecd5c48ffc4942178",
     "workingTree": false,
-    "inputsSHA256": "5508ffc6347bffaed13fb29409eb856df9a7796d3ebdcb6f623d1e8871b52999"
+    "inputsSHA256": "d7b8f52add7828d7e9ed20418fe072e7db03e75483a168bb7f5c34e9d2a04a13"
   },
   "dependencies": [
     {
@@ -21,9 +21,9 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261115",
-      "notes": "Align the versioned request identity with the reviewed published package while retaining native open String model IDs and existing request, response, option, error, stream and telemetry behavior. Derived TypeScript model-ID/catalog reorganizations preserve the existing native runtime policies. Reviewed npm delta: @ai-sdk/deepinfra 3.0.92 to 3.0.93. Validation passed: node Scripts/test-packages.mjs (55 owning packages, 2451 owning tests and 1736 compatibility tests), generation checks, 27 tooling tests, isolation/version checks, deterministic exports and minimum-dependency consumers. Documentation check/build passed (104 pages). Publication is gated by exact-source Swift 6.3.3 CI; subsequent public refs and clients are recorded in Docs/ReleaseVerification20261115.json. Paid/live-service checks were not run; this delta does not claim full-package parity.",
-      "compatibility": "Compatible versioned request identity correction; existing public selectors and dependency minimums remain. npm baselines and Swift SemVer are independent."
+      "id": "upstream-parity-20261116",
+      "notes": "Chat and image requests follow the upstream OpenAI-compatible behavior.",
+      "compatibility": "Source-compatible; changes are additive. Request bodies, results, warnings and errors change to match the reviewed upstream package."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-deepinfra",
@@ -32,7 +32,7 @@
       "name": "@ai-sdk/deepinfra",
       "reviewedVersion": "3.0.93",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.deepInfra`, `OpenAICompatibleProvider`, `DeepInfraProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json; 2026-11-15 delta: Docs/WeeklyUpstreamAudit20261115.json",
+      "evidence": "`AIProviders.deepInfra`, `OpenAICompatibleProvider`, `DeepInfraProviderTests.swift`; 2026-11-01 delta: Docs/Archive/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/Archive/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/Archive/WeeklyUpstreamAudit20261114.json; 2026-11-15 delta: Docs/Archive/WeeklyUpstreamAudit20261115.json",
       "reviewStatus": "imported-reviewed-with-gaps",
       "archiveIntegrity": "sha512-dNuu15hSEO9SvNMMqLC+nbwbAKEILt+7Pm05Y0DLb/3Apu2RxBfgCW952hfHxVbH9eEQPN6Yi4uXWmhxIrbjYA==",
       "sourceRef": "npm:@ai-sdk/deepinfra@3.0.93",
@@ -44,7 +44,7 @@
         "LanguageModelV4",
         "ProviderV4"
       ],
-      "contractReview": "2026-11-15: published source/declarations and exact matching-release tests reviewed separately. Native delta scenarios, per-file dispositions, unchanged-catalog evidence and explicit remaining gaps are recorded in Docs/WeeklyUpstreamAudit20261115.json. Required checks remain a separate gate; no full-package/live-service parity claim."
+      "contractReview": "2026-11-15: published source/declarations and exact matching-release tests reviewed separately. Native delta scenarios, per-file dispositions, unchanged-catalog evidence and explicit remaining gaps are recorded in Docs/Archive/WeeklyUpstreamAudit20261115.json. Required checks remain a separate gate; no full-package/live-service parity claim."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -63,19 +63,19 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-deepinfra/Porting/map.json",
-      "sha256": "5f7e48fb7bfd4b81eeea5d141182a96c997a01651270cfea09b49890e10e5c00"
+      "sha256": "6a2ee603bf05c193d01ea4921f8aaa78bb858ced143a89ed9ef94db6b7c49088"
     },
     {
       "canonicalPath": "Packages/swift-ai-deepinfra/README.md",
-      "sha256": "ebfd1537ec5a9c2b0d5a2c613cb526e25f8f2f42f662b24850c9c6f1c5a7adeb"
+      "sha256": "eaecf71fcd994751bb33cf3dfac3c9abeafd2efbf0e3450161abbca8d5ba2fb7"
     },
     {
       "canonicalPath": "Packages/swift-ai-deepinfra/Sources/SwiftAIDeepInfra/DeepInfraModels.swift",
-      "sha256": "eb9d5f6ddc45e958625becc1b2f23bf0dc76965d23972e7fca23f6319f88df35"
+      "sha256": "3f8995220b118df5ff8b8ac05425ea24823ea22674674555631843ffa9bb3269"
     },
     {
       "canonicalPath": "Packages/swift-ai-deepinfra/Sources/SwiftAIDeepInfra/DeepInfraProvider.swift",
-      "sha256": "7fcf4d8d139da268f2002e3335cc3d38a90c391caed385244cdfbd47878d8c98"
+      "sha256": "510ee2275231e0fffab02b2c192f7dde9661ef3779d80a68bbd5843a015d2e57"
     },
     {
       "canonicalPath": "Packages/swift-ai-deepinfra/Sources/SwiftAIDeepInfra/DeepInfraRouting.swift",
@@ -92,6 +92,10 @@
     {
       "canonicalPath": "Packages/swift-ai-deepinfra/Tests/SwiftAIDeepInfraTests/DeepInfraProviderTests.swift",
       "sha256": "1e28c7e18574fc9966a15a00c69e7c977b296c4e01aecc44e94fdeddc3491457"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-deepinfra/Tests/SwiftAIDeepInfraTests/DeepInfraUpstreamParityTests.swift",
+      "sha256": "3a3e0af9534d2319d51829deae01e5904277e31164976632d2a28978662f782c"
     },
     {
       "canonicalPath": "Packages/swift-ai-deepinfra/Tests/SwiftAIDeepInfraTests/FixtureDownloadTransport.swift",
